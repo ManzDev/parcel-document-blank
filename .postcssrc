@@ -1,0 +1,17 @@
+{
+    "modules": false,
+    "plugins": {
+        "postcss-preset-env": {
+            "stage": 2,
+            "features": {
+                "nesting-rules": true
+            }
+        },
+        "postcss-import": true,
+        "postcss-import-url": true,
+        "postcss-font-magician": true,
+        "postcss-for": true,
+        "autoprefixer": true,
+        "cssnano": true
+    }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "parcel-document-blank",
+  "version": "1.0.0",
+  "description": "Blank web project starter-kit with Parcel",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf build && parcel build src/index.pug --out-dir build/ --public-url ./",
+    "start": "parcel src/index.pug",
+    "dev": "parcel serve src/index.pug && parcel watch src/index.pug",
+    "clean": "rm -rf .cache node_modules package-lock.json dist",
+    "deploy": "git subtree push --prefix build origin gh-pages"
+  },
+  "author": "Manz",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^8.6.3",
+    "babel-preset-env": "^1.7.0",
+    "cssnano": "^3.10.0",
+    "parcel-bundler": "^1.9.1",
+    "postcss": "^6.0.22",
+    "postcss-font-magician": "^2.2.1",
+    "postcss-for": "^2.1.1",
+    "postcss-import": "^11.1.0",
+    "postcss-import-url": "^3.0.4",
+    "postcss-preset-env": "^5.1.0",
+    "pug": "^2.0.3",
+    "stylelint-config-standard": "^18.2.0",
+    "tslint": "^5.10.0",
+    "typescript": "^2.9.2"
+  },
+  "dependencies": {}
+}
