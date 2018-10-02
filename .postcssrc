@@ -1,17 +1,21 @@
 {
-    "modules": false,
-    "plugins": {
-        "postcss-preset-env": {
-            "stage": 2,
-            "features": {
-                "nesting-rules": true
-            }
-        },
-        "postcss-import": true,
-        "postcss-import-url": true,
-        "postcss-font-magician": true,
-        "postcss-for": true,
-        "autoprefixer": true,
-        "cssnano": true
-    }
+  "plugins": {
+    "postcss-easy-import": {
+      "prefix": "_",
+      "extensions": [".pcss", ".css"]
+    },    
+    "postcss-mixins": true,
+    "postcss-preset-env": {
+      "stage": 3,
+      "features": {
+        "nesting-rules": true,
+        "case-insensitive-attributes": true,
+        "hexadecimal-alpha-notation": true,
+        "place-properties": true
+      }
+    },
+    "postcss-font-magician": true,
+    "autoprefixer": true,
+    "postcss-clean": true
+  }
 }
