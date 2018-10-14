@@ -1,11 +1,10 @@
-A prepared package for new HTML/CSS/JS projects and easy coding (parcel version).
+A prepared package for new HTML/CSS/JS projects and easy coding using Parcel bundler.
 
 ## Features
 
 - Automatic bundler with Parcel [ ParcelJS: https://parceljs.org/ ]
-- `npm run dev`: Local webserver for development (serve + watch)
-- `npm run build`: Automatic build & view production files and size detailed report [ Parcel-plugin-bundle-visualiser: https://github.com/gregtillbrook/parcel-plugin-bundle-visualiser ]
-- `npm run deploy`: Optional deploy `dist` folder (master branch) to `gh-pages` branch for GitHub Pages [ GitHub Pages: https://pages.github.com/ ]
+- NPM Scripts: Tasks for fast development & generation
+- For HTML binding use `export func` on functions and use `global.func()`.
 
 ### HTML
 
@@ -14,12 +13,12 @@ A prepared package for new HTML/CSS/JS projects and easy coding (parcel version)
 ### CSS
 
 - Allow write PostCSS code (pre, post and transform CSS with JS) [ PostCSS: https://postcss.org/ ]
-  * Convert modern CSS into browsers can understand [ postcss-preset-env: https://preset-env.cssdb.org/features ]
-  * Auto add CSS prefix properties [Autoprefixer: https://autoprefixer.github.io/ ]
-  * Improve import PostCSS files (partials and globs) [ postcss-easy-import: https://github.com/TrySound/postcss-easy-import ]
-  * Support for CSS mixins (functions-in-css) [ postcss-mixins: https://github.com/postcss/postcss-mixins ]
-  * Auto import Google Fonts [ PostCSS-font-magician: https://github.com/jonathantneal/postcss-font-magician ]
-  * Auto minify & optimize CSS code with clean-css [ CleanCSS: https://github.com/jakubpawlowicz/clean-css ]
+  - Convert modern CSS into browsers can understand [ postcss-preset-env: https://preset-env.cssdb.org/features ]
+  - Auto add CSS prefix properties [Autoprefixer: https://autoprefixer.github.io/ ]
+  - Improve import PostCSS files (partials and globs) [ postcss-easy-import: https://github.com/TrySound/postcss-easy-import ]
+  - Support for CSS mixins (functions-in-css) [ postcss-mixins: https://github.com/postcss/postcss-mixins ]
+  - Auto import Google Fonts [ PostCSS-font-magician: https://github.com/jonathantneal/postcss-font-magician ]
+  - Auto minify & optimize CSS code with clean-css [ CleanCSS: https://github.com/jakubpawlowicz/clean-css ]
 - Review CSS code for improve quality, tips and avoid errors [ StyleLint: https://stylelint.io/ ]
 
 ### JS
@@ -27,10 +26,29 @@ A prepared package for new HTML/CSS/JS projects and easy coding (parcel version)
 - Allow write ES201x (ES8/ES7/ES6) Javascript with Babel (JS transpiler to ES5) [ Babel: https://babeljs.io/ ]
 - Review Javascript code for improve quality, tips and avoid errors [ ESLint: https://eslint.org/ ]
 
+### Other branches
+
 #### Typescript (ts branch)
 
 - Allow write Typescript code (Superset of Javascript) [ Typescript: https://www.typescriptlang.org/ ]
 - Review Typescript code for improve quality, tips and avoid errors [ TSLint: https://palantir.github.io/tslint/ ]
+
+#### Simple HTML (nopug branch)
+
+- Allow write pure HTML instead Pug files.
+
+## Scripts
+
+| NPM Command | Description | More info |
+|---------|-------------|-----------|
+| `npm run dev` | Local webserver for development (serve + watch) | |
+| `npm run watch` | Watch changes (dev for use with external server: apache, nginx, local server...) | |
+| `npm run build` <sup>**</sup> | Automatic production build (for upload). Includes size detailed report (bundle visualiser) | [@gregtillbrook/Parcel-plugin-bundle-visualiser](https://github.com/gregtillbrook/parcel-plugin-bundle-visualiser) |
+| `npm run clean:cache` | Remove `.cache`, `dist` and `build` folder. |
+| `npm run clean:all` | Reset default repo and remove cache and all npm generated files. |
+| `npm run deploy` | Optional deploy `build` folder (master branch) to `gh-pages` branch for GitHub Pages | [GitHub Pages](https://pages.github.com/) |
+
+<sup>**</sup> Change `--public-url /` for your project URL path. For example, on repo user.github.io/repo-name/sample-web/ use `--public-url /repo-name/sample-web/`.
 
 ## Requisites
 
