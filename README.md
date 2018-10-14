@@ -39,16 +39,16 @@ A prepared package for new HTML/CSS/JS projects and easy coding using Parcel bun
 
 ## Scripts
 
-| NPM Command | Description | More info |
-|---------|-------------|-----------|
-| `npm run dev` | Local webserver for development (serve + watch) | |
-| `npm run watch` | Watch changes (dev for use with external server: apache, nginx, local server...) | |
-| `npm run build` <sup>**</sup> | Automatic production build (for upload). Includes size detailed report (bundle visualiser) | [@gregtillbrook/Parcel-plugin-bundle-visualiser](https://github.com/gregtillbrook/parcel-plugin-bundle-visualiser) |
+| NPM Command | Description |
+|---------|-------------|
+| `npm run dev` | Local webserver for development (serve + watch) |
+| `npm run watch` | Watch changes (dev for use with external server: apache, nginx, local server...) |
+| `npm run build` | Automatic production build (for upload). Includes size detailed report ([parcel-plugin-bundle-visualiser](https://github.com/gregtillbrook/parcel-plugin-bundle-visualiser)) <sup>*</sup> |
 | `npm run clean:cache` | Remove `.cache`, `dist` and `build` folder. |
 | `npm run clean:all` | Reset default repo and remove cache and all npm generated files. |
-| `npm run deploy` | Optional deploy `build` folder (master branch) to `gh-pages` branch for GitHub Pages | [GitHub Pages](https://pages.github.com/) |
+| `npm run deploy` | Optional deploy `build` folder (master branch) to `gh-pages` branch for [GitHub Pages](https://pages.github.com/). |
 
-<sup>**</sup> Change `--public-url /` for your project URL path. For example, on repo user.github.io/repo-name/sample-web/ use `--public-url /repo-name/sample-web/`.
+<sup>*</sup> Change `--public-url /` for your project URL path. For example, on repo user.github.io/repo-name/sample-web/ use `--public-url /repo-name/sample-web/`.
 
 ## Requisites
 
