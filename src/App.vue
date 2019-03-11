@@ -9,7 +9,7 @@
   :root {
     text-align: center;
   }
-  
+
   h1 {
     font-family: Montserrat, Impact, sans-serif;
     font-size: 72px;

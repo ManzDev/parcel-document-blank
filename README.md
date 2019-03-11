@@ -37,6 +37,10 @@ A prepared package for new HTML/CSS/JS projects and easy coding using Parcel bun
 
 - Allow write pure HTML instead Pug files.
 
+#### VueJS (ts vue)
+
+- Allow create websites with VueJS framework, ESLint and others.
+
 ## Scripts
 
 | NPM Command | Description |
