@@ -1,27 +1,5 @@
 A prepared package for new HTML/CSS/JS projects and easy coding using Parcel bundler.
 
-## Usage
-
-##### Vanilla document blank
-
-```
-git clone https://github.com/ManzDev/parcel-document-blank folder-project
-cd folder-project
-rm -rf .git
-npm install
-npm run dev
-```
-
-##### Vue document blank
-
-```
-git clone -b vue https://github.com/ManzDev/parcel-document-blank folder-project
-cd folder-project
-rm -rf .git
-npm install
-npm run dev
-```
-
 ## Features
 
 - 📦 Automatic bundler with [Parcel](https://parceljs.org/)
@@ -48,7 +26,29 @@ npm run dev
 
 - ✌️ Prepared branch for [VueJS](https://vuejs.org/) (Javascript framework)
 
-## Scripts
+## Usage
+
+##### Vanilla document blank
+
+```
+git clone https://github.com/ManzDev/parcel-document-blank folder-project
+cd folder-project
+rm -rf .git
+npm install
+npm run dev
+```
+
+##### Vue document blank
+
+```
+git clone -b vue https://github.com/ManzDev/parcel-document-blank folder-project
+cd folder-project
+rm -rf .git
+npm install
+npm run dev
+```
+
+## NPM Scripts
 
 | NPM Command     | Description    |
 |-----------------|----------------|
