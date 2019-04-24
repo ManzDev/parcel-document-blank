@@ -2,33 +2,42 @@ A prepared package for new HTML/CSS/JS projects and easy coding using Parcel bun
 
 ## Features
 
-- 📦 Automatic bundler with [Parcel](https://parceljs.org/)
-- ⚙️ Preconfigured [NPM Scripts](https://docs.npmjs.com/misc/scripts) (development, build and clean tasks)
-- 🚩 For HTML binding use `export func` on functions and use `global.func()`
+### 1. Organization
 
-### CSS
+| Feature  | Description |
+|----------|-------------|
+| 📦 [Parcel](https://parceljs.org/) | Automatic bundler |
+| ⚙️ [NPM Scripts](https://docs.npmjs.com/misc/scripts) | Preconfigured scripts (development, build and clean tasks) |
+| 🚩 HTML Binding | Use `export func` on functions and use `global.func()` |
 
-- 🌀 [PostCSS](https://postcss.org/) (Pre, post and transform CSS with JS)
-  - 🔫 Convert modern CSS into browsers can understand with [postcss-preset-env](https://preset-env.cssdb.org/features)
-  - 🍂 Auto add CSS prefix properties with [Autoprefixer](https://autoprefixer.github.io/)
-  - ➰ Improve import PostCSS files (partials and globs) with [postcss-easy-import](https://github.com/TrySound/postcss-easy-import)
-  - ➕ Support for CSS mixins (functions-in-css) [postcss-mixins](https://github.com/postcss/postcss-mixins)
-  - 🅰️ Auto import Google Fonts [PostCSS-font-magician](https://github.com/jonathantneal/postcss-font-magician)
-  - 🔧 Auto minify & optimize CSS code with [CleanCSS](https://github.com/jakubpawlowicz/clean-css)
-- 🤵 Review CSS code for improve quality, tips and avoid errors with [StyleLint](https://stylelint.io/)
+### 2. Styles
 
-### JS
+| Feature  | Description |
+|----------|-------------|
+| 🌀 [PostCSS](https://postcss.org/) | Pre, post and transform CSS with JS |
+| 🔫 [postcss-preset-env](https://preset-env.cssdb.org/features) | Convert modern CSS into browsers can understand |
+| 🍂 [Autoprefixer](https://autoprefixer.github.io/) | Auto add CSS prefix properties |
+| ➰ [postcss-easy-import](https://github.com/TrySound/postcss-easy-import) | Improve import PostCSS files (partials and globs) |
+| ➕ [postcss-mixins](https://github.com/postcss/postcss-mixins) | Support for CSS mixins (functions-in-css) |
+| 🅰️ [postcss-font-magician](https://github.com/jonathantneal/postcss-font-magician) | Auto import Google Fonts |
+| 🔧 [CleanCSS](https://github.com/jakubpawlowicz/clean-css) | Auto minify & optimize CSS code |
+| 🤵 [StyleLint](https://stylelint.io/) | Review CSS code for improve quality, tips and avoid errors |
 
-- 💼 Allow write ES2015+ (ES5/ES6/ES8) Javascript with [Babel](https://babeljs.io/) (JS transpiler to ES5)
-- 👁️ Review Javascript code for improve quality, tips and avoid errors with [ESLint](https://eslint.org/)
+### 3. Javascript
 
-### VueJS (vue branch)
-
-- ✌️ Prepared branch for [VueJS](https://vuejs.org/) (Javascript framework)
+| Feature  | Description |
+|----------|-------------|
+| 💼 [Babel](https://babeljs.io/) | Transpile Javascript to ES5. |
+| 🎁 [preset-env](https://babeljs.io/docs/en/babel-preset-env) | Smart preset to write ES2015+ (ES6/ES7/ES8) Javascript. |
+| 🌎 [Browserlist](https://browserl.ist/) | Compatibilize code to specific browsers. |
+| 👁️ [ESLint](https://eslint.org/) | Review Javascript code for improve quality, tips and avoid errors |
 
 ## Usage
 
-##### Vanilla document blank
+- `master` branch: Vanilla document blank project
+- `vue` branch: VueJS document blank project
+
+### 1. Master branch
 
 ```
 git clone https://github.com/ManzDev/parcel-document-blank folder-project
@@ -38,7 +47,7 @@ npm install
 npm run dev
 ```
 
-##### Vue document blank
+### 2. Vue branch
 
 ```
 git clone -b vue https://github.com/ManzDev/parcel-document-blank folder-project
