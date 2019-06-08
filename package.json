@@ -11,6 +11,9 @@
     "clean:all": "rm -rf node_modules package-lock.json .cache dist build",
     "deploy": "git subtree push --prefix build origin gh-pages"
   },
+  "alias": {
+    "vue": "./node_modules/vue/dist/vue.min.js"
+  },
   "keywords": [
     "parcel",
     "template",
