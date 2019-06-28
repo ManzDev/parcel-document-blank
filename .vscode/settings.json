@@ -1,5 +1,4 @@
 {
-  "prettier.eslintIntegration": true,
   "npm.enableScriptExplorer": true,
   "workbench.colorCustomizations": {
     "terminal.foreground": "#dddddd",
@@ -31,5 +30,7 @@
     "javascript",
     { "language": "vue", "autoFix": true }
   ],
-  "eslint.autoFixOnSave": true
+  "eslint.autoFixOnSave": true,
+  "stylelint.enable": true,
+  "editor.formatOnSave": true
 }
