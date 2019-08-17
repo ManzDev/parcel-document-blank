@@ -18,7 +18,7 @@
     "terminal.ansiBrightBlue": "#5833ff",
     "terminal.ansiBrightMagenta": "#f935f8",
     "terminal.ansiBrightCyan": "#14f0f0",
-    "terminal.ansiBrightWhite": "#e9ebeb",
+    "terminal.ansiBrightWhite": "#e9ebeb"
   },
   "emmet.includeLanguages": {
     "vue": "html"
