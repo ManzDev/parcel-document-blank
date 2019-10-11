@@ -8,7 +8,6 @@ A prepared package for new HTML/CSS/JS projects and easy coding using Parcel bun
 |----------|-------------|
 | 📦 [Parcel](https://parceljs.org/) | Automatic bundler |
 | ⚙️ [NPM Scripts](https://docs.npmjs.com/misc/scripts) | Preconfigured scripts (development, build and clean tasks) |
-| 🚩 HTML Binding | Use `export func` on functions and use `global.func()` |
 
 ### 2. Styles
 
@@ -63,9 +62,10 @@ npm run dev
 |-----------------|----------------|
 | `npm run dev`   | Local webserver for development (serve + watch) |
 | `npm run watch` | Watch changes (dev for use with external server: apache, nginx, local server...) |
-| `npm run build` | Automatic production build (for upload). <br><small><sup>*</sup> Includes size detailed report ([parcel-plugin-bundle-visualiser](https://github.com/gregtillbrook/parcel-plugin-bundle-visualiser))</small> |
+| `npm run build` | Automatic production build (for upload). <br><small> Includes size detailed report ([parcel-plugin-bundle-visualiser](https://github.com/gregtillbrook/parcel-plugin-bundle-visualiser))</small> |
+| `npm run build:gh-pages` | Automatic production build for GitHub Pages. <small><sup>*</sup></small> |
 | `npm run clean:cache` | Remove `.cache`, `dist` and `build` folder. |
 | `npm run clean:all` | Reset default repo and remove cache and all npm generated files. |
 | `npm run deploy` | Optional deploy `build` folder (master branch) to `gh-pages` branch for [GitHub Pages](https://pages.github.com/). |
 
-<sup>*</sup> Change `--public-url /` for your project URL path. For example, on repo user.github.io/repo-name/sample-web/ use `--public-url /repo-name/sample-web/`.
+<sup>*</sup> Don't forget change `name` in your package.json for your `repository` name. Example: https://user.github.io/<strong>reponame</strong>/.
