@@ -10,6 +10,7 @@
     "build": "rm -rf build/* && parcel build $npm_package_main -d build --public-url /",
     "clean:cache": "rm -rf .cache dist build",
     "clean:all": "rm -rf node_modules package-lock.json .cache dist build",
+    "reset": "rm -rf .git && echo Do not forget change name/version/description in package.json",
     "deploy": "git subtree push --prefix build origin gh-pages"
   },
   "keywords": [

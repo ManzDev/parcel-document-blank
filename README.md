@@ -41,10 +41,11 @@ A prepared package for new HTML/CSS/JS projects and easy coding using Parcel bun
 ```
 git clone https://github.com/ManzDev/parcel-document-blank folder-project
 cd folder-project
-rm -rf .git
+npm run reset
 npm install
 npm run dev
 ```
+
 
 ### 2. Vue branch
 
@@ -66,6 +67,7 @@ npm run dev
 | `npm run build:gh-pages` | Automatic production build for GitHub Pages. <small><sup>*</sup></small> |
 | `npm run clean:cache` | Remove `.cache`, `dist` and `build` folder. |
 | `npm run clean:all` | Reset default repo and remove cache and all npm generated files. |
+| `npm run reset` | Delete .git folder and remember change package.json |
 | `npm run deploy` | Optional deploy `build` folder (master branch) to `gh-pages` branch for [GitHub Pages](https://pages.github.com/). |
 
 <sup>*</sup> Don't forget change `name` in your package.json for your `repository` name. Example: https://user.github.io/<strong>reponame</strong>/.
