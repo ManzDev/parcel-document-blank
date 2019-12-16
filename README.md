@@ -33,9 +33,8 @@ A prepared package for new HTML/CSS/JS projects and easy coding using Parcel bun
 
 <sup>\*</sup> <small>Includes size detailed report ([parcel-plugin-bundle-visualiser](https://github.com/gregtillbrook/parcel-plugin-bundle-visualiser))</small>
 
-<sup>\*\*</sup> <small>GitHub Pages URL is https://user.github.io/<strong>reponame</strong>/.</small><br>
-<sup>\*\*</sup> <small>Don't forget change `name` in your package.json for your `repository` field.</small><br>
-<sup>\*\*</sup> <small>**DANGER**: In this template, GitHub build save into `docs/` folder.</small>
+<sup>\*\*</sup> <small>GitHub Pages URL is https://user.github.io/<strong>reponame</strong>/.</small> Don't forget change `name` to **reponame** in your `package.json`.</small><br>
+<sup>\*\*</sup> <small>**DANGER**: In this template, GitHub build save into `docs/` folder. Require enable in Settings.</small>
 
 <sup>\*\*\*</sup> <small>Alternative build deploy for [GitHub Pages](https://pages.github.com/)</small>
 
@@ -80,7 +79,7 @@ A prepared package for new HTML/CSS/JS projects and easy coding using Parcel bun
 - `master` branch: Vanilla document blank project
 - `vue` branch: VueJS document blank project
 
-## 0. Requirements / Recommended
+## Requirements / Recommended
 
 - node 12+ / npm 6+: https://github.com/nodesource/distributions/blob/master/README.md#debinstall
 - Prettier for VSCode: https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
@@ -88,7 +87,7 @@ A prepared package for new HTML/CSS/JS projects and easy coding using Parcel bun
 - ESLint for VSCode: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
 - StyleLint for VSCode: https://marketplace.visualstudio.com/items?itemName=stuartzhang.stylelint-stzhang
 
-## 1. Master branch
+## Master branch
 
 ```
 git clone https://github.com/ManzDev/parcel-document-blank folder-project
@@ -98,7 +97,7 @@ npm install
 npm run dev
 ```
 
-### 2. Vue branch
+## Vue branch
 
 ```
 git clone -b vue https://github.com/ManzDev/parcel-document-blank folder-project
