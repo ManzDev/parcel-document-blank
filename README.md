@@ -33,7 +33,9 @@ A prepared package for new HTML/CSS/JS projects and easy coding using Parcel bun
 
 <sup>\*</sup> <small>Includes size detailed report ([parcel-plugin-bundle-visualiser](https://github.com/gregtillbrook/parcel-plugin-bundle-visualiser))</small>
 
-<sup>\*\*</sup> <small>Don't forget change `name` in your package.json for your `repository` name. Example: https://user.github.io/<strong>reponame</strong>/. **DANGER**: GitHub build save into `docs/` folder.</small>
+<sup>\*\*</sup> <small>GitHub Pages URL is https://user.github.io/<strong>reponame</strong>/.</small><br>
+<sup>\*\*</sup> <small>Don't forget change `name` in your package.json for your `repository` field.</small><br>
+<sup>\*\*</sup> <small>**DANGER**: In this template, GitHub build save into `docs/` folder.</small>
 
 <sup>\*\*\*</sup> <small>Alternative build deploy for [GitHub Pages](https://pages.github.com/)</small>
 
@@ -57,6 +59,7 @@ A prepared package for new HTML/CSS/JS projects and easy coding using Parcel bun
 [7]: https://github.com/jonathantneal/postcss-font-magician
 [8]: https://github.com/jakubpawlowicz/clean-css
 [9]: https://stylelint.io/
+[15]: https://htmlhint.com/
 
 ## 3. Javascript
 
