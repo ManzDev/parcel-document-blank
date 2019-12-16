@@ -1,17 +1,18 @@
 {
   "name": "parcel-template-blank",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "Blank template project starter-kit with Parcel Bundler",
   "main": "src/index.html",
   "scripts": {
-    "dev": "parcel serve $npm_package_main --open",
+    "dev": "parcel serve $npm_package_main",
     "watch": "parcel watch $npm_package_main",
-    "build:gh-pages": "rm -rf build/* && parcel build $npm_package_main -d build --public-url /$npm_package_name/",
-    "build": "rm -rf build/* && parcel build $npm_package_main -d build --public-url /",
+    "lint:js": "eslint src/js/**/*.js",
+    "lint:css": "stylelint src/css/**/*.css",
     "clean:cache": "rm -rf .cache dist build",
     "clean:all": "rm -rf node_modules package-lock.json .cache dist build",
-    "reset": "rm -rf .git && echo Do not forget change name/version/description in package.json",
-    "deploy": "git subtree push --prefix build origin gh-pages"
+    "build:gh-pages": "rm -rf docs/* && parcel build $npm_package_main -d docs --public-url /$npm_package_name/",
+    "build": "rm -rf build/* && parcel build $npm_package_main -d build --public-url /",
+    "deploy:gh-pages": "git subtree push --prefix docs origin gh-pages"
   },
   "keywords": [
     "parcel",
@@ -42,13 +43,12 @@
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-bundle-visualiser": "^1.2.0",
     "postcss-clean": "^1.1.0",
-    "postcss-easy-import": "^3.0.0",
     "postcss-font-magician": "^2.2.2",
     "postcss-mixins": "^6.2.2",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^1.18.0",
-    "stylelint": "^11.1.1",
-    "stylelint-config-prettier": "^6.0.0",
+    "stylelint": "^12.0.0",
+    "stylelint-config-prettier": "^8.0.0",
     "stylelint-config-standard": "^19.0.0"
   },
   "dependencies": {}
