@@ -2,14 +2,18 @@
   "name": "parcel-template-blank",
   "version": "1.0.2",
   "description": "Blank template project starter-kit with Parcel Bundler",
-  "main": "index.html",
+  "main": "src/index.html",
   "scripts": {
-    "dev": "parcel serve src/index.html",
-    "watch": "parcel watch src/index.html --global global",
-    "build": "rm -rf build/* && parcel build src/index.html -d build --global global --public-url /",
+    "dev": "parcel serve $npm_package_main",
+    "watch": "parcel watch $npm_package_main",
+    "lint:js": "eslint src/**/*.js src/**/*.vue",
+    "lint:css": "stylelint src/**/*.css src/**/*.vue",
+    "lint": "npm-run-all lint:*",
     "clean:cache": "rm -rf .cache dist build",
     "clean:all": "rm -rf node_modules package-lock.json .cache dist build",
-    "deploy": "git subtree push --prefix build origin gh-pages"
+    "build": "rm -rf build/* && parcel build $npm_package_main -d build --public-url /",
+    "build:gh-pages": "rm -rf docs/* && parcel build $npm_package_main -d docs --public-url /$npm_package_name/",
+    "deploy:gh-pages": "git subtree push --prefix docs origin gh-pages"
   },
   "alias": {
     "vue": "./node_modules/vue/dist/vue.min.js"
@@ -31,13 +35,13 @@
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
-    "@vue/component-compiler-utils": "^3.0.0",
     "autoprefixer": "^9.6.0",
     "eslint": "^6.7.2",
     "eslint-config-prettier": "^6.7.0",
     "eslint-config-standard": "^14.1.0",
     "eslint-plugin-import": "^2.17.3",
     "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^6.0.1",
@@ -50,6 +54,7 @@
     "stylelint": "^12.0.0",
     "stylelint-config-prettier": "^8.0.0",
     "stylelint-config-standard": "^19.0.0",
+    "@vue/component-compiler-utils": "^3.0.0",
     "vue-hot-reload-api": "^2.3.3",
     "vue-template-compiler": "^2.6.10"
   },

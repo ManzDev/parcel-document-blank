@@ -1,5 +1,7 @@
 {
+  /* VSCode */
   "npm.enableScriptExplorer": true,
+  /* Terminal */
   "workbench.colorCustomizations": {
     "terminal.foreground": "#dddddd",
     "terminal.background": "#000000",
@@ -18,7 +20,11 @@
     "terminal.ansiBrightBlue": "#5833ff",
     "terminal.ansiBrightMagenta": "#f935f8",
     "terminal.ansiBrightCyan": "#14f0f0",
-    "terminal.ansiBrightWhite": "#e9ebeb",
+    "terminal.ansiBrightWhite": "#e9ebeb"
+  },
+  /* Linter & Code */
+  "files.associations": {
+    "*.pcss": "postcss"
   },
   "emmet.includeLanguages": {
     "vue": "html"
@@ -26,9 +32,10 @@
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
-  "eslint.validate": [
-    "javascript",
-    { "language": "vue", "autoFix": true }
-  ],
-  "eslint.autoFixOnSave": true
+  "eslint.validate": ["javascript", "vue"],
+  "eslint.format.enable": true,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
 }
