@@ -1,51 +1,99 @@
 A prepared package for new HTML/CSS/JS projects and easy coding using Parcel bundler.
 
-## Features
+# Features
 
-### 1. Organization
+## 1. Organization
 
-| Feature  | Description |
-|----------|-------------|
-| 📦 [Parcel](https://parceljs.org/) | Automatic bundler |
-| ⚙️ [NPM Scripts](https://docs.npmjs.com/misc/scripts) | Preconfigured scripts (development, build and clean tasks) |
+| Feature                           | Description                                                |
+| --------------------------------- | ---------------------------------------------------------- |
+| 📦 [Parcel][1]                    | Automatic bundler                                          |
+| 📊 [Parcel Bundle Visualiser][16] | Generate report to visualise bundle contents on build.     |
+| ⚙️ [NPM Scripts][2]               | Preconfigured scripts (development, build and clean tasks) |
+| 🦋 [Prettier][14]                 | Opinionated code formatter.                                |
 
-### 2. Styles
+[1]: https://parceljs.org/
+[2]: https://docs.npmjs.com/misc/scripts
+[14]: https://prettier.io/
+[16]: https://github.com/gregtillbrook/parcel-plugin-bundle-visualiser
 
-| Feature  | Description |
-|----------|-------------|
-| 🌀 [PostCSS](https://postcss.org/) | Pre, post and transform CSS with JS |
-| 🔫 [postcss-preset-env](https://preset-env.cssdb.org/features) | Convert modern CSS into browsers can understand |
-| 🍂 [Autoprefixer](https://autoprefixer.github.io/) | Auto add CSS prefix properties |
-| ➰ [postcss-easy-import](https://github.com/TrySound/postcss-easy-import) | Improve import PostCSS files (partials and globs) |
-| ➕ [postcss-mixins](https://github.com/postcss/postcss-mixins) | Support for CSS mixins (functions-in-css) |
-| 🅰️ [postcss-font-magician](https://github.com/jonathantneal/postcss-font-magician) | Auto import Google Fonts |
-| 🔧 [CleanCSS](https://github.com/jakubpawlowicz/clean-css) | Auto minify & optimize CSS code |
-| 🤵 [StyleLint](https://stylelint.io/) | Review CSS code for improve quality, tips and avoid errors |
+### NPM Scripts
 
-### 3. Javascript
+| NPM Command              | Description                                                                           |
+| ------------------------ | ------------------------------------------------------------------------------------- |
+| `npm run dev`            | Local webserver for development (serve + watch)                                       |
+| `npm run watch`          | Watch changes (dev for use with external server: apache, nginx, local server...)      |
+| `npm run lint:css`       | Lint CSS files with stylelint (`src/css/\*.css` )                                     |
+| `npm run lint:js`        | Lint Javascript files with eslint (`src/js/\*.js` )                                   |
+| `npm run lint`           | Lint both (CSS & Javascript)                                                          |
+| `npm run clean:cache`    | Remove `.cache`, `dist` and `build` folder.                                           |
+| `npm run clean:all`      | Reset default repo and remove cache and all npm generated files.                      |
+| `npm run build`          | Automatic production build (for website upload). <sup>\*</sup>                        |
+| `npm run build:gh-pages` | Automatic production build for GitHub Pages. <sup>\*\*</sup>                          |
+| `npm run deploy`         | Optional deploy `build` folder (master branch) to `gh-pages` branch <sup>\*\*\*</sup> |
 
-| Feature  | Description |
-|----------|-------------|
-| 💼 [Babel](https://babeljs.io/) | Transpile Javascript to ES5. |
-| 🎁 [preset-env](https://babeljs.io/docs/en/babel-preset-env) | Smart preset to write ES2015+ (ES6/ES7/ES8) Javascript. |
-| 🌎 [Browserlist](https://browserl.ist/) | Compatibilize code to specific browsers. |
-| 👁️ [ESLint](https://eslint.org/) | Review Javascript code for improve quality, tips and avoid errors |
+<sup>\*</sup> <small>Includes size detailed report ([parcel-plugin-bundle-visualiser](https://github.com/gregtillbrook/parcel-plugin-bundle-visualiser))</small>
 
-## Usage
+<sup>\*\*</sup> <small>Don't forget change `name` in your package.json for your `repository` name. Example: https://user.github.io/<strong>reponame</strong>/. **DANGER**: GitHub build save into `docs/` folder.</small>
+
+<sup>\*\*\*</sup> <small>Alternative build deploy for [GitHub Pages](https://pages.github.com/)</small>
+
+## 2. HTML & Styles
+
+| Feature                       | Description                                                |
+| ----------------------------- | ---------------------------------------------------------- |
+| 🏷️ [HTMLHint][15]             | Static code analysis tool for HTML.                        |
+| 🌀 [PostCSS][3]               | Pre, post and transform CSS with JS                        |
+| 👓 [PostCSS Preset-env][4]    | Convert modern CSS into browsers can understand            |
+| 🍂 [Autoprefixer][5]          | Auto add CSS prefix properties                             |
+| ➕ [PostCSS Mixins][6]        | Support for CSS mixins (functions-in-css)                  |
+| 🅰️ [PostCSS Font Magician][7] | Auto import Google Fonts                                   |
+| 🔧 [CleanCSS][8]              | Auto minify & optimize CSS code                            |
+| 🤵 [StyleLint][9]             | Review CSS code for improve quality, tips and avoid errors |
+
+[3]: https://postcss.org/
+[4]: https://preset-env.cssdb.org/features
+[5]: https://autoprefixer.github.io/
+[6]: https://github.com/postcss/postcss-mixins
+[7]: https://github.com/jonathantneal/postcss-font-magician
+[8]: https://github.com/jakubpawlowicz/clean-css
+[9]: https://stylelint.io/
+
+## 3. Javascript
+
+| Feature                   | Description                                                        |
+| ------------------------- | ------------------------------------------------------------------ |
+| 💼 [Babel][10]            | Transpile Future Javascript to ES5.                                |
+| 🎁 [Babel Preset-env][11] | Smart preset to write ES2015+ (ES6/ES7/ES8) Javascript.            |
+| 🌎 [Browserlist][12]      | Compatibilize code to specific browsers.                           |
+| 👁️ [ESLint][13]           | Review Javascript code for improve quality, tips and avoid errors. |
+
+[10]: https://babeljs.io/
+[11]: https://babeljs.io/docs/en/babel-preset-env
+[12]: https://browserl.ist/
+[13]: https://eslint.org/
+
+# Usage
 
 - `master` branch: Vanilla document blank project
 - `vue` branch: VueJS document blank project
 
-### 1. Master branch
+## 0. Requirements / Recommended
+
+- node 12+ / npm 6+: https://github.com/nodesource/distributions/blob/master/README.md#debinstall
+- Prettier for VSCode: https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
+- Icons for VSCode: https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons
+- ESLint for VSCode: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
+- StyleLint for VSCode: https://marketplace.visualstudio.com/items?itemName=stuartzhang.stylelint-stzhang
+
+## 1. Master branch
 
 ```
 git clone https://github.com/ManzDev/parcel-document-blank folder-project
 cd folder-project
-npm run reset
+rm -rf .git
 npm install
 npm run dev
 ```
-
 
 ### 2. Vue branch
 
@@ -56,18 +104,3 @@ rm -rf .git
 npm install
 npm run dev
 ```
-
-## NPM Scripts
-
-| NPM Command     | Description    |
-|-----------------|----------------|
-| `npm run dev`   | Local webserver for development (serve + watch) |
-| `npm run watch` | Watch changes (dev for use with external server: apache, nginx, local server...) |
-| `npm run build` | Automatic production build (for upload). <br><small> Includes size detailed report ([parcel-plugin-bundle-visualiser](https://github.com/gregtillbrook/parcel-plugin-bundle-visualiser))</small> |
-| `npm run build:gh-pages` | Automatic production build for GitHub Pages. <small><sup>*</sup></small> |
-| `npm run clean:cache` | Remove `.cache`, `dist` and `build` folder. |
-| `npm run clean:all` | Reset default repo and remove cache and all npm generated files. |
-| `npm run reset` | Delete .git folder and remember change package.json |
-| `npm run deploy` | Optional deploy `build` folder (master branch) to `gh-pages` branch for [GitHub Pages](https://pages.github.com/). |
-
-<sup>*</sup> Don't forget change `name` in your package.json for your `repository` name. Example: https://user.github.io/<strong>reponame</strong>/.

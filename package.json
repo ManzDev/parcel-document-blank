@@ -8,10 +8,11 @@
     "watch": "parcel watch $npm_package_main",
     "lint:js": "eslint src/js/**/*.js",
     "lint:css": "stylelint src/css/**/*.css",
+    "lint": "npm-run-all lint:*",
     "clean:cache": "rm -rf .cache dist build",
     "clean:all": "rm -rf node_modules package-lock.json .cache dist build",
-    "build:gh-pages": "rm -rf docs/* && parcel build $npm_package_main -d docs --public-url /$npm_package_name/",
     "build": "rm -rf build/* && parcel build $npm_package_main -d build --public-url /",
+    "build:gh-pages": "rm -rf docs/* && parcel build $npm_package_main -d docs --public-url /$npm_package_name/",
     "deploy:gh-pages": "git subtree push --prefix docs origin gh-pages"
   },
   "keywords": [
