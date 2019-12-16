@@ -1,5 +1,7 @@
 A prepared package for new HTML/CSS/JS projects and easy coding using Parcel bundler.
 
+![parcel-document-blank starter-kit](src/img/parcel-document-blank.png)
+
 # Features
 
 ## 1. Organization
