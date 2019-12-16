@@ -1,5 +1,26 @@
 {
   "npm.enableScriptExplorer": true,
+  /* Terminal */
+  "workbench.colorCustomizations": {
+    "terminal.foreground": "#dddddd",
+    "terminal.background": "#000000",
+    "terminal.ansiBlack": "#000000",
+    "terminal.ansiRed": "#c23621",
+    "terminal.ansiGreen": "#25bc24",
+    "terminal.ansiYellow": "#adad27",
+    "terminal.ansiBlue": "#492ee1",
+    "terminal.ansiMagenta": "#d338d3",
+    "terminal.ansiCyan": "#33bbc8",
+    "terminal.ansiWhite": "#cbcccd",
+    "terminal.ansiBrightBlack": "#818383",
+    "terminal.ansiBrightRed": "#fc391f",
+    "terminal.ansiBrightGreen": "#31e722",
+    "terminal.ansiBrightYellow": "#eaec23",
+    "terminal.ansiBrightBlue": "#5833ff",
+    "terminal.ansiBrightMagenta": "#f935f8",
+    "terminal.ansiBrightCyan": "#14f0f0",
+    "terminal.ansiBrightWhite": "#e9ebeb"
+  },
   /* Formats */
   "files.associations": {
     "*.pcss": "postcss"
@@ -9,6 +30,9 @@
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
-  "eslint.validate": ["javascript", { "language": "vue", "autoFix": true }],
-  "eslint.autoFixOnSave": true
+  "eslint.validate": ["javascript"],
+  "eslint.format.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
 }
