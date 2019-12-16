@@ -6,7 +6,8 @@
   "extends": [
     "eslint:recommended",
     "standard",
-    "plugin:vue/recommended"
+    "plugin:vue/recommended",
+    "prettier"
   ],
   "globals": {
     "Atomics": "readonly",
@@ -16,9 +17,7 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "plugins": [
-    "vue"
-  ],
+  "plugins": ["vue"],
   "rules": {
     "indent": ["error", 2],
     "space-before-function-paren": ["error", "never"],
@@ -28,12 +27,15 @@
     "semi": "off",
     "no-console": "off",
     "vue/html-self-closing": "off",
-    "vue/max-attributes-per-line": ["error", {
-      "singleline": 3,
-      "multiline": {
-        "max": 1,
-        "allowFirstLine": true
+    "vue/max-attributes-per-line": [
+      "error",
+      {
+        "singleline": 3,
+        "multiline": {
+          "max": 1,
+          "allowFirstLine": true
+        }
       }
-    }]
+    ]
   }
 }
