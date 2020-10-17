@@ -1,5 +1,4 @@
 {
-  "npm.enableScriptExplorer": true,
   /* Terminal */
   "workbench.colorCustomizations": {
     "terminal.foreground": "#dddddd",
@@ -21,18 +20,13 @@
     "terminal.ansiBrightCyan": "#14f0f0",
     "terminal.ansiBrightWhite": "#e9ebeb"
   },
-  /* Formats */
-  "files.associations": {
-    "*.pcss": "postcss"
-  },
   /* Linters */
   "editor.formatOnSave": true,
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
-  "eslint.validate": ["javascript"],
-  "eslint.format.enable": true,
   "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": true,
     "source.fixAll.eslint": true
   }
 }

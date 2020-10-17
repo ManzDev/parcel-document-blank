@@ -8,15 +8,15 @@ A prepared package for new HTML/CSS/JS projects and easy coding using Parcel bun
 
 | Feature                           | Description                                                |
 | --------------------------------- | ---------------------------------------------------------- |
-| 📦 [Parcel][1]                    | Automatic bundler                                          |
-| 📊 [Parcel Bundle Visualiser][16] | Generate report to visualise bundle contents on build.     |
+| 📦 [Parcel2][1]                   | Automatic Parcel 2 bundler                                 |
+| 📊 [Parcel Bundle Visualiser][16] | Generate size report into parcel-bundle-reports/           |
 | ⚙️ [NPM Scripts][2]               | Preconfigured scripts (development, build and clean tasks) |
 | 🦋 [Prettier][14]                 | Opinionated code formatter.                                |
 
-[1]: https://parceljs.org/
+[1]: https://v2.parceljs.org/
 [2]: https://docs.npmjs.com/misc/scripts
 [14]: https://prettier.io/
-[16]: https://github.com/gregtillbrook/parcel-plugin-bundle-visualiser
+[16]: https://v2.parceljs.org/features/production/
 
 ### NPM Scripts
 
@@ -24,21 +24,16 @@ A prepared package for new HTML/CSS/JS projects and easy coding using Parcel bun
 | ------------------------ | ------------------------------------------------------------------------------------- |
 | `npm run dev`            | Local webserver for development (serve + watch)                                       |
 | `npm run watch`          | Watch changes (dev for use with external server: apache, nginx, local server...)      |
-| `npm run lint:css`       | Lint CSS files with stylelint (`src/css/\*.css` )                                     |
-| `npm run lint:js`        | Lint Javascript files with eslint (`src/js/\*.js` )                                   |
-| `npm run lint`           | Lint both (CSS & Javascript)                                                          |
-| `npm run clean:cache`    | Remove `.cache`, `dist` and `build` folder.                                           |
+| `npm run report`         | Generate reports into `parcel-bundle-reports/` and `build/bundle-buddy.json`          |
+| `npm run build`          | Automatic production build (for website upload).                                      |
+| `npm run gh-pages`       | Automatic production build for GitHub Pages. <sup>\*</sup>                            |
+| `npm run deploy`         | Deploy `build` folder to GitHub Pages.                                                |
+| `npm run lintcss`        | Lint CSS files with stylelint (`src/css/\*.css` )                                     |
+| `npm run lintjs`         | Lint Javascript files with eslint (`src/js/\*.js` )                                   |
+| `npm run clean:cache`    | Remove `.parcel-cache`, `dist` and `build` folder.                                    |
 | `npm run clean:all`      | Reset default repo and remove cache and all npm generated files.                      |
-| `npm run build`          | Automatic production build (for website upload). <sup>\*</sup>                        |
-| `npm run build:gh-pages` | Automatic production build for GitHub Pages. <sup>\*\*</sup>                          |
-| `npm run deploy`         | Optional deploy `build` folder (master branch) to `gh-pages` branch <sup>\*\*\*</sup> |
 
-<sup>\*</sup> <small>Includes size detailed report ([parcel-plugin-bundle-visualiser](https://github.com/gregtillbrook/parcel-plugin-bundle-visualiser))</small>
-
-<sup>\*\*</sup> <small>GitHub Pages URL is https://user.github.io/<strong>reponame</strong>/.</small> Don't forget change `name` to **reponame** in your `package.json`.</small><br>
-<sup>\*\*</sup> <small>**DANGER**: In this template, GitHub build save into `docs/` folder. Require enable in Settings.</small>
-
-<sup>\*\*\*</sup> <small>Alternative build deploy for [GitHub Pages](https://pages.github.com/)</small>
+<sup>\*</sup> <small>GitHub Pages URL is https://user.github.io/<strong>reponame</strong>/.</small> Don't forget change `name` to **reponame** in your `package.json`.</small><br>
 
 ## 2. HTML & Styles
 
@@ -50,7 +45,6 @@ A prepared package for new HTML/CSS/JS projects and easy coding using Parcel bun
 | 🍂 [Autoprefixer][5]          | Auto add CSS prefix properties                             |
 | ➕ [PostCSS Mixins][6]        | Support for CSS mixins (functions-in-css)                  |
 | 🅰️ [PostCSS Font Magician][7] | Auto import Google Fonts                                   |
-| 🔧 [CleanCSS][8]              | Auto minify & optimize CSS code                            |
 | 🤵 [StyleLint][9]             | Review CSS code for improve quality, tips and avoid errors |
 
 [3]: https://postcss.org/
@@ -58,7 +52,6 @@ A prepared package for new HTML/CSS/JS projects and easy coding using Parcel bun
 [5]: https://autoprefixer.github.io/
 [6]: https://github.com/postcss/postcss-mixins
 [7]: https://github.com/jonathantneal/postcss-font-magician
-[8]: https://github.com/jakubpawlowicz/clean-css
 [9]: https://stylelint.io/
 [15]: https://htmlhint.com/
 
@@ -87,14 +80,14 @@ A prepared package for new HTML/CSS/JS projects and easy coding using Parcel bun
 - Prettier for VSCode: https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
 - Icons for VSCode: https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons
 - ESLint for VSCode: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
-- StyleLint for VSCode: https://marketplace.visualstudio.com/items?itemName=stuartzhang.stylelint-stzhang
+- StyleLint for VSCode: https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint
 
 ## Master branch
 
 ```
 git clone https://github.com/ManzDev/parcel-document-blank folder-project
 cd folder-project
-rm -rf .git
+rm -rf .git && git init
 npm install
 npm run dev
 ```
@@ -104,7 +97,7 @@ npm run dev
 ```
 git clone -b vue https://github.com/ManzDev/parcel-document-blank folder-project
 cd folder-project
-rm -rf .git
+rm -rf .git && git init
 npm install
 npm run dev
 ```
