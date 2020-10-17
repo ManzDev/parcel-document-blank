@@ -1,6 +1,6 @@
 A prepared package for new HTML/CSS/JS projects and easy coding using Parcel bundler.
 
-![parcel-document-blank starter-kit](src/img/parcel-document-blank.png)
+![parcel-document-blank starter-kit](src/assets/parcel-document-blank.png)
 
 # Features
 
@@ -9,7 +9,7 @@ A prepared package for new HTML/CSS/JS projects and easy coding using Parcel bun
 | Feature                           | Description                                                |
 | --------------------------------- | ---------------------------------------------------------- |
 | 📦 [Parcel2][1]                   | Automatic Parcel 2 bundler                                 |
-| 📊 [Parcel Bundle Visualiser][16] | Generate size report into parcel-bundle-reports/           |
+| 📊 [Parcel2 Bundle Visualiser][16]| Generate size report into parcel-bundle-reports/           |
 | ⚙️ [NPM Scripts][2]               | Preconfigured scripts (development, build and clean tasks) |
 | 🦋 [Prettier][14]                 | Opinionated code formatter.                                |
 
