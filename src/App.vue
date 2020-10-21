@@ -1,13 +1,18 @@
 <template>
   <div>
     <h1>¡VueJS 2.x!</h1>
-    <img src="./assets/logo.png" alt="VueJS Logo" />
+    <img src="url:./assets/logo.png" alt="VueJS Logo" />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App',
+  name: "App",
+  data() {
+    return {
+      name: "Vue",
+    };
+  },
 };
 </script>
 

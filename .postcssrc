@@ -15,7 +15,6 @@
       }
     },
     "postcss-font-magician": true,
-    "autoprefixer": true,
-    "postcss-clean": true
+    "autoprefixer": true
   }
 }

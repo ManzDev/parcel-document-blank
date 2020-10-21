@@ -4,19 +4,16 @@
   "description": "Blank template project starter-kit with Parcel Bundler",
   "main": "src/index.html",
   "scripts": {
-    "dev": "parcel serve $npm_package_main",
-    "watch": "parcel watch $npm_package_main",
+    "dev": "parcel serve src/index.html",
+    "watch": "parcel watch src/index.html",
+    "report": "PARCEL_BUNDLE_ANALYZER=1 BUNDLE_BUDDY=1 parcel build src/index.html --dist-dir build && live-server parcel-bundle-reports/default.html",
+    "build": "parcel build src/index.html --dist-dir build --public-url /",
+    "gh-pages": "parcel build src/index.html --dist-dir build --public-url /parcel-template-blank/",
+    "deploy": "gh-pages -d build",
     "lint:js": "eslint src/**/*.js src/**/*.vue",
     "lint:css": "stylelint src/**/*.css src/**/*.vue",
-    "lint": "npm-run-all lint:*",
     "clean:cache": "rm -rf .cache dist build",
-    "clean:all": "rm -rf node_modules package-lock.json .cache dist build",
-    "build": "rm -rf build/* && parcel build $npm_package_main -d build --public-url /",
-    "build:gh-pages": "rm -rf docs/* && parcel build $npm_package_main -d docs --public-url /$npm_package_name/",
-    "deploy:gh-pages": "git subtree push --prefix docs origin gh-pages"
-  },
-  "alias": {
-    "vue": "./node_modules/vue/dist/vue.min.js"
+    "clean:all": "rm -rf node_modules package-lock.json .cache dist build"
   },
   "keywords": [
     "parcel",
@@ -32,30 +29,27 @@
   "author": "Manz",
   "license": "ISC",
   "devDependencies": {
-    "@babel/cli": "^7.4.4",
-    "@babel/core": "^7.4.5",
-    "@babel/preset-env": "^7.4.5",
-    "@vue/component-compiler-utils": "^3.2.0",
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "@vue/compiler-sfc": "^3.0.2",
     "autoprefixer": "^10.0.1",
     "eslint": "^7.11.0",
-    "eslint-config-prettier": "^6.7.0",
-    "eslint-config-standard": "^14.1.0",
-    "eslint-plugin-import": "^2.17.3",
+    "eslint-config-prettier": "^6.13.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^3.1.2",
-    "eslint-plugin-promise": "^4.1.1",
-    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
     "eslint-plugin-vue": "^7.1.0",
+    "gh-pages": "^3.1.0",
+    "parcel": "^2.0.0-beta.1",
     "postcss-font-magician": "^3.0.0",
     "postcss-mixins": "^7.0.1",
-    "postcss-preset-env": "^6.6.0",
+    "postcss-preset-env": "^6.7.0",
     "stylelint": "^13.7.2",
-    "stylelint-config-prettier": "^8.0.0",
-    "stylelint-config-standard": "^20.0.0",
-    "vue-hot-reload-api": "^2.3.4",
-    "vue-template-compiler": "^2.6.12"
-  },
-  "dependencies": {
-    "vue": "^2.6.12"
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-standard": "^20.0.0"
   }
 }
