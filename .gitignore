@@ -1,4 +1,6 @@
 node_modules/
-.cache/
+.parcel-cache/
+parcel-bundle-reports/
 dist/
-package-lock.json
+build/
+bundle-buddy.json

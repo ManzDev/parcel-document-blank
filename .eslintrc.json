@@ -15,7 +15,7 @@
     "SharedArrayBuffer": "readonly"
   },
   "parserOptions": {
-    "ecmaVersion": 2018,
+    "ecmaVersion": 2020,
     "sourceType": "module"
   },
   "plugins": ["vue", "prettier"],
@@ -24,9 +24,9 @@
     "indent": ["error", 2],
     "space-before-function-paren": ["error", "never"],
     "linebreak-style": ["error", "unix"],
-    "quotes": ["error", "single"],
+    "quotes": ["error", "double"],
     "curly": ["error", "multi-or-nest"],
-    "semi": "off",
+    "semi": ["error", "always"],
     "no-console": "off",
     "vue/html-self-closing": "off",
     "vue/max-attributes-per-line": [
