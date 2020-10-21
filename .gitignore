@@ -3,5 +3,4 @@ node_modules/
 parcel-bundle-reports/
 dist/
 build/
-package-lock.json
 bundle-buddy.json
