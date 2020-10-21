@@ -1,6 +1,6 @@
 node_modules/
 .parcel-cache/
-parcel-bundle-reports
+parcel-bundle-reports/
 dist/
 build/
 package-lock.json
